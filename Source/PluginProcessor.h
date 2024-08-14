@@ -55,5 +55,7 @@ public:
 
 private:
     //==============================================================================
+    juce::AudioProcessorValueTreeState parameters;
+    std::atomic<float>* oneKnobeParameter = nullptr;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (NasubiAudioProcessor)
 };

@@ -19,9 +19,14 @@ NasubiAudioProcessor::NasubiAudioProcessor()
                       #endif
                        .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
                      #endif
-                       )
+                       ),
+                        parameters(*this, nullptr, juce::Identifier("NasubiPlugin"),
+                            { std::make_unique<juce::AudioParameterFloat>(
+                                                  "one_knobe", "One Knobe",
+                                                  juce::NormalisableRange{ 0.f, 1000.f, 0.1f, 0.2f, false }, 500.f)})
 #endif
 {
+    oneKnobeParameter = parameters.getRawParameterValue("one_knobe");
 }
 
 NasubiAudioProcessor::~NasubiAudioProcessor()

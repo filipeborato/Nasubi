@@ -51,4 +51,4 @@ cd Nasubi
 
 ## Usage
 
-After installation or building, the plugin will be available in your preferred DAW. Load Wavetable Synth on an instrument track and explore the various features offered to create and modify your sounds.
+After installation or building, the plugin will be available in your preferred DAW. You can load Nasubi on a track and use it to improve your mix.

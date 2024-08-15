@@ -18,7 +18,7 @@
 class NasubiAudioProcessorEditor  : public juce::AudioProcessorEditor
 {
 public:
-    NasubiAudioProcessorEditor (NasubiAudioProcessor&);
+    NasubiAudioProcessorEditor (NasubiAudioProcessor&,  juce::AudioProcessorValueTreeState& vts);
     ~NasubiAudioProcessorEditor() override;
 
     //==============================================================================
@@ -30,6 +30,7 @@ private:
     // access the processor object that created it.
     juce::Image background;
     RasterKnob slider;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> sliderAttachment;
     NasubiAudioProcessor& audioProcessor;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (NasubiAudioProcessorEditor)

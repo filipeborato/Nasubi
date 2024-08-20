@@ -171,7 +171,7 @@ bool NasubiAudioProcessor::hasEditor() const
 
 juce::AudioProcessorEditor* NasubiAudioProcessor::createEditor()
 {
-    return new NasubiAudioProcessorEditor (*this);
+    return new NasubiAudioProcessorEditor (*this, parameters);
 }
 
 //==============================================================================

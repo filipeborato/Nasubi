@@ -3,12 +3,15 @@
 #include "PluginEditor.h"
 
 //==============================================================================
-NasubiAudioProcessorEditor::NasubiAudioProcessorEditor(NasubiAudioProcessor &p)
+NasubiAudioProcessorEditor::NasubiAudioProcessorEditor(NasubiAudioProcessor &p, juce::AudioProcessorValueTreeState& vts)
     : AudioProcessorEditor(&p), audioProcessor(p)
 {
   // Make sure that before the constructor has finished, you've set the
   // editor's size to whatever you need it to be.
   addAndMakeVisible(slider);
+  sliderAttachment.reset(
+        new juce::AudioProcessorValueTreeState::SliderAttachment(
+            vts, "one_knobe", slider));
   setSize(800, 400);
 }
 

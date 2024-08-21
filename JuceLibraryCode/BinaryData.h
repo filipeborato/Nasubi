@@ -11,11 +11,14 @@ namespace BinaryData
     extern const char*   brushedMetalSHRUNK_jpg;
     const int            brushedMetalSHRUNK_jpgSize = 52441;
 
+    extern const char*   ODE112G1265DYNUS86L61_wav;
+    const int            ODE112G1265DYNUS86L61_wavSize = 4488;
+
     extern const char*   RasterKnob_png;
     const int            RasterKnob_pngSize = 1290849;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 2;
+    const int namedResourceListSize = 3;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];

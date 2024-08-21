@@ -23,7 +23,7 @@ NasubiAudioProcessor::NasubiAudioProcessor()
                         parameters(*this, nullptr, juce::Identifier("NasubiPlugin"),
                             { std::make_unique<juce::AudioParameterFloat>(
                                                   "one_knobe", "One Knobe",
-                                                  juce::NormalisableRange{ 0.f, 1000.f, 0.1f, 0.2f, false }, 500.f)})
+                                                  juce::NormalisableRange{ 0.f, 1000.f, 1.0f, 1.0f, false }, 500.f)})
 #endif
 {
     oneKnobeParameter = parameters.getRawParameterValue("one_knobe");
@@ -98,8 +98,14 @@ void NasubiAudioProcessor::changeProgramName (int index, const juce::String& new
 //==============================================================================
 void NasubiAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    // Use this method as the place to do any pre-playback
-    // initialisation that you need..
+    spec.maximumBlockSize = samplesPerBlock;
+    spec.sampleRate = sampleRate;
+    spec.numChannels = getTotalNumOutputChannels();
+
+    tube.prepare(spec);
+    tube.loadImpulseResponse (BinaryData::ODE112G1265DYNUS86L61_wav, BinaryData::ODE112G1265DYNUS86L61_wavSize,
+                              juce::dsp::Convolution::Stereo::yes, juce::dsp::Convolution::Trim::yes, 0,
+                              juce::dsp::Convolution::Normalise::yes);                                  
 }
 
 void NasubiAudioProcessor::releaseResources()

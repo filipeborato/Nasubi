@@ -526,5 +526,49 @@ build/intermediate/Release/PluginEditor_94d4fb09.o: \
  /home/filipe-borato/JUCE/modules/juce_audio_utils/players/juce_AudioProcessorPlayer.h \
  /home/filipe-borato/JUCE/modules/juce_audio_utils/audio_cd/juce_AudioCDBurner.h \
  /home/filipe-borato/JUCE/modules/juce_audio_utils/audio_cd/juce_AudioCDReader.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/juce_dsp.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/native/juce_SIMDNativeOps_fallback.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/native/juce_SIMDNativeOps_sse.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/containers/juce_SIMDRegister.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/containers/juce_SIMDRegister_Impl.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/maths/juce_SpecialFunctions.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/maths/juce_Matrix.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/maths/juce_Phase.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/maths/juce_Polynomial.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/maths/juce_FastMathApproximations.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/maths/juce_LookupTable.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/maths/juce_LogRampedValue.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/containers/juce_AudioBlock.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/processors/juce_ProcessContext.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/processors/juce_ProcessorWrapper.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/processors/juce_ProcessorChain.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/processors/juce_ProcessorDuplicator.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/processors/juce_IIRFilter.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/processors/juce_IIRFilter_Impl.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/processors/juce_FIRFilter.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/processors/juce_StateVariableFilter.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/processors/juce_FirstOrderTPTFilter.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/processors/juce_Panner.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/processors/juce_DelayLine.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/processors/juce_Oversampling.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/processors/juce_BallisticsFilter.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/processors/juce_LinkwitzRileyFilter.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/processors/juce_DryWetMixer.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/processors/juce_StateVariableTPTFilter.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/frequency/juce_FFT.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/frequency/juce_Convolution.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/frequency/juce_Windowing.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/filter_design/juce_FilterDesign.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/widgets/juce_Reverb.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/widgets/juce_Bias.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/widgets/juce_Gain.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/widgets/juce_WaveShaper.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/widgets/juce_Oscillator.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/widgets/juce_LadderFilter.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/widgets/juce_Compressor.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/widgets/juce_NoiseGate.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/widgets/juce_Limiter.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/widgets/juce_Phaser.h \
+ /home/filipe-borato/JUCE/modules/juce_dsp/widgets/juce_Chorus.h \
  ../../JuceLibraryCode/BinaryData.h ../../Source/PluginEditor.h \
  ../../Source/RasterKnob.h

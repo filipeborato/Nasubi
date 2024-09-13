@@ -23,7 +23,7 @@ NasubiAudioProcessor::NasubiAudioProcessor()
                         parameters(*this, nullptr, juce::Identifier("NasubiPlugin"),
                             { std::make_unique<juce::AudioParameterFloat>(
                                                   "one_knobe", "One Knobe",
-                                                  juce::NormalisableRange{ 0.f, 1000.f, 1.0f, 1.0f, false }, 500.f)})
+                                                  juce::NormalisableRange{ 0.f, 10.f, 0.1f, 1.0f, false }, 3.5f)})
 #endif
 {
     oneKnobeParameter = parameters.getRawParameterValue("one_knobe");
@@ -105,7 +105,11 @@ void NasubiAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock
     tube.prepare(spec);
     tube.loadImpulseResponse (BinaryData::ODE112G1265DYNUS86L61_wav, BinaryData::ODE112G1265DYNUS86L61_wavSize,
                               juce::dsp::Convolution::Stereo::yes, juce::dsp::Convolution::Trim::yes, 0,
-                              juce::dsp::Convolution::Normalise::yes);                                  
+                              juce::dsp::Convolution::Normalise::yes);
+    gain.prepare(spec);
+    gain.setRampDurationSeconds(0.2);
+    //gain.setGainDecibels(6.0);
+                                    
 }
 
 void NasubiAudioProcessor::releaseResources()
@@ -145,9 +149,13 @@ void NasubiAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce:
     juce::ScopedNoDenormals noDenormals;
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
+    const auto oneKonobe = oneKnobeParameter->load();
+
+    gain.setGainLinear(oneKonobe);
 
     juce::dsp::AudioBlock<float> block {buffer};
     tube.process(juce::dsp::ProcessContextReplacing<float>(block));
+    gain.process(juce::dsp::ProcessContextReplacing<float>(block));
 }
 
 //==============================================================================

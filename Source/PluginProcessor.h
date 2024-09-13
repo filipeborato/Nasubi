@@ -58,6 +58,7 @@ private:
     //==============================================================================
     juce::dsp::ProcessSpec spec;
     juce::dsp::Convolution tube;
+    juce::dsp::Gain<float> gain;
     juce::AudioProcessorValueTreeState parameters;
 
     std::atomic<float>* oneKnobeParameter = nullptr;

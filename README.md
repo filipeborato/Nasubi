@@ -27,6 +27,8 @@ To build Wavetable Synth from the source, follow these steps:
 git clone https://github.com/filipeborato/WavetableSynth
 
 ```
+
+```
 cd Nasubi
 ```    
 
